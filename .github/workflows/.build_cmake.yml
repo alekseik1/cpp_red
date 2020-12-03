@@ -5,7 +5,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [windows, ubuntu, macos]
+        os: [ubuntu, macos]
     name: On ${{ matrix.os }}-latest
     runs-on: ${{ matrix.os }}-latest
     steps:

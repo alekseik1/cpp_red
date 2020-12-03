@@ -95,18 +95,22 @@ private:
     int fail_count = 0;
 };
 
+#define UNIQ_ID_IMPL_2(lineno) _a_local_var_##lineno
+#define UNIQ_ID_IMPL(lineno) UNIQ_ID_IMPL_2(lineno)
+#define UNIQ_ID UNIQ_ID_IMPL(__LINE__)
+
 #define ASSERT_EQUAL(x, y) {            \
-  ostringstream os;                     \
-  os << #x << " != " << #y << ", "      \
+  ostringstream UNIQ_ID;                \
+  UNIQ_ID << #x << " != " << #y << ", "      \
     << __FILE__ << ":" << __LINE__;     \
-  AssertEqual(x, y, os.str());          \
+  AssertEqual(x, y, UNIQ_ID.str());     \
 }
 
 #define ASSERT(x) {                     \
-  ostringstream os;                     \
-  os << #x << " is false, "             \
+  ostringstream UNIQ_ID;                \
+  UNIQ_ID << #x << " is false, "             \
     << __FILE__ << ":" << __LINE__;     \
-  Assert(x, os.str());                  \
+  Assert(x, UNIQ_ID.str());             \
 }
 
 #define RUN_TEST(tr, func) \

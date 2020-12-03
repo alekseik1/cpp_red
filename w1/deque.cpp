@@ -1,4 +1,4 @@
-// #include "test_runner.h"
+#include "test_runner.h"
 #include <vector>
 
 using namespace std;
@@ -62,7 +62,6 @@ private:
     vector<T> _back;
 };
 
-/**
 void TestTable() {
     Deque<int> d;
     ASSERT_EQUAL(d.Size(), 0);
@@ -95,4 +94,3 @@ int main() {
     RUN_TEST(tr, TestTable);
     return 0;
 }
- */

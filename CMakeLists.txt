@@ -12,3 +12,4 @@ add_executable(paginator w1/paginator.cpp)
 
 project(w2)
 add_executable(sort_students w2/sort_students.cpp)
+add_executable(learner w2/learner.cpp)

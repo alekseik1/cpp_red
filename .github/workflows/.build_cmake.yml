@@ -1,0 +1,14 @@
+name: Build with CMake
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows, ubuntu, macos]
+    name: On ${{ matrix.os }}-latest
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: cmake .
+      - run: make

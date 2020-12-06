@@ -15,3 +15,6 @@ add_executable(sort_students w2/sort_students.cpp)
 add_executable(learner w2/learner.cpp)
 add_executable(books_slow w2/slow.cpp)
 add_executable(books_fast w2/fast.cpp)
+
+project(w3)
+add_executable(object_pool w3/object_pool.cpp)

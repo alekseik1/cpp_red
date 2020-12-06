@@ -18,3 +18,4 @@ add_executable(books_fast w2/fast.cpp)
 
 project(w3)
 add_executable(object_pool w3/object_pool.cpp)
+add_executable(swap_reverse_copy w3/swap_sort_copy.cpp)

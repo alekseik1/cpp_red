@@ -15,6 +15,7 @@ add_executable(sort_students w2/sort_students.cpp)
 add_executable(learner w2/learner.cpp)
 add_executable(books_slow w2/slow.cpp)
 add_executable(books_fast w2/fast.cpp)
+add_executable(booking w2/booking.cpp)
 
 project(w3)
 include_directories(headers)

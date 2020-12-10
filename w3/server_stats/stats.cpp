@@ -1,8 +1,9 @@
 #include "stats.h"
+#include <vector>
 
 HttpRequest ParseRequest(string_view line) {
     while (line[0] == ' ') line.remove_prefix(1);
-    array<string_view, 3> result;
+    vector<string_view> result(3);
     size_t pos = 0;
     size_t i = 0;
     const size_t pos_end = std::string_view::npos;

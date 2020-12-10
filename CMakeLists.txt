@@ -1,5 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_STANDARD 17)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 project(w1)
 include_directories(headers/)
@@ -27,3 +34,4 @@ add_executable(string_set w3/string_set.cpp)
 add_executable(sportsmen w3/sportsmen.cpp)
 add_executable(stack_vector w3/stack_vector.cpp)
 add_executable(my_swap w3/my_swap.cpp)
+add_executable(airport_counter w3/airport_counter.cpp)

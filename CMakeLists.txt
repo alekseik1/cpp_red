@@ -27,3 +27,7 @@ add_executable(string_set w3/string_set.cpp)
 add_executable(sportsmen w3/sportsmen.cpp)
 add_executable(stack_vector w3/stack_vector.cpp)
 add_executable(my_swap w3/my_swap.cpp)
+
+project(w4)
+include_directories(headers)
+add_executable(joseph_counter w4/joseph_counter.cpp)

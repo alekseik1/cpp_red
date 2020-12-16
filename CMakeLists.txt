@@ -36,6 +36,7 @@ add_executable(stack_vector w3/stack_vector.cpp)
 add_executable(my_swap w3/my_swap.cpp)
 add_executable(airport_counter w3/airport_counter.cpp)
 add_executable(text_editor w3/text_editor.cpp)
+add_executable(merge_sort w3/merge_sort_3.cpp)
 
 project(w3/server_stats)
 include_directories(headers)

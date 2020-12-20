@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
+enable_language(CXX)
 set(CMAKE_CXX_STANDARD 17)
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -7,6 +8,10 @@ endif()
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 
 project(w1)
 include_directories(headers/)
@@ -49,3 +54,7 @@ include_directories(headers)
 add_executable(joseph_counter w4/joseph_counter.cpp)
 add_executable(string_grouping w4/string_grouping.cpp)
 add_executable(token_split w4/token_split.cpp)
+
+project(w4_async)
+add_executable(matrix_sum w4/matrix_sum.cpp)
+target_link_libraries(matrix_sum PRIVATE Threads::Threads)
